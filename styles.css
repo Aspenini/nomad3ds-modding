@@ -153,98 +153,88 @@ h1 {
 }
 
 /* Enhanced pricing tiers */
-.pricing-tier {
+.pricing-section {
+    padding: 4rem 2rem;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: 20px;
+    margin: 2rem 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-tier {
+    background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
+    border-radius: 15px;
     text-align: center;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    position: relative;
-    overflow: hidden;
-}
-
-.pricing-tier::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-    transform: scaleX(0);
     transition: transform 0.3s ease;
-}
-
-.pricing-tier:hover::after {
-    transform: scaleX(1);
-}
-
-.pricing-tier.visible {
-    opacity: 1;
-    transform: translateY(0);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-tier:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .tier-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
     color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .tier-price {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #fff;
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 .tier-features {
     list-style: none;
+    padding: 0;
     margin: 1.5rem 0;
+    text-align: left;
 }
 
 .tier-features li {
     margin: 0.8rem 0;
-    font-size: 1.1rem;
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: all 0.5s ease;
-    position: relative;
-    padding-left: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
 }
 
 .tier-features li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.3s ease;
+    content: "✓";
+    color: #4CAF50;
+    margin-right: 0.5rem;
+    font-weight: bold;
 }
 
-.pricing-tier:hover .tier-features li {
-    opacity: 1;
-    transform: translateX(0);
+.pricing-guarantee {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(76, 175, 80, 0.2);
 }
 
-.pricing-tier:hover .tier-features li::before {
-    opacity: 1;
-    transform: translateX(0);
+.pricing-guarantee h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
-.tier-features li:nth-child(1) { transition-delay: 0.1s; }
-.tier-features li:nth-child(2) { transition-delay: 0.2s; }
-.tier-features li:nth-child(3) { transition-delay: 0.3s; }
-.tier-features li:nth-child(4) { transition-delay: 0.4s; }
-.tier-features li:nth-child(5) { transition-delay: 0.5s; }
-.tier-features li:nth-child(6) { transition-delay: 0.6s; }
-.tier-features li:nth-child(7) { transition-delay: 0.7s; }
+.pricing-guarantee p {
+    color: #fff;
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+}
 
 .section-title {
     text-align: center;
@@ -300,6 +290,11 @@ h1 {
     }
 
     .pricing-tier {
-        margin-bottom: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .pricing-guarantee {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
     }
 } 
