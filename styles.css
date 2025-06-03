@@ -236,6 +236,62 @@ h1 {
     font-size: 1.1rem;
 }
 
+.curated-set-details {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.curated-set-details h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.curated-set-details p {
+    color: #fff;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.curated-set-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.curated-set-details ul li {
+    margin: 0.8rem 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.curated-set-details ul li::before {
+    content: "🔹";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+.curated-set-details .highlight {
+    text-align: center;
+    font-style: italic;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+}
+
 .section-title {
     text-align: center;
     font-size: 2.5rem;
